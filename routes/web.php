@@ -12,5 +12,5 @@
 */
 
 $router->get('/', function () use ($router) {
-    return $router->app->version();
+    return $_SERVER['X_REAL_IP'] ?? $_SERVER['REMOTE_ADDR'];
 });
